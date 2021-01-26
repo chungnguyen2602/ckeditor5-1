@@ -38,6 +38,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
+import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage';
 import ImageResizeEditing from '@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting';
 import ImageResizeButtons from '@ckeditor/ckeditor5-image/src/imageresize/imageresizebuttons';
 import ImageResizeHandles from '@ckeditor/ckeditor5-image/src/imageresize/imageresizehandles';
@@ -79,7 +81,9 @@ DecoupledEditor.builtinPlugins = [
 	TextTransformation,
 	ImageResizeEditing,
 	ImageResizeButtons,
-	ImageResizeHandles
+	ImageResizeHandles,
+	ImageInsert,
+	AutoImage
 ];
 
 // Editor configuration.
@@ -108,7 +112,7 @@ DecoupledEditor.defaultConfig = {
 			'|',
 			'link',
 			'blockquote',
-			'imageUpload',
+			'imageInsert',
 			'insertTable',
 			'mediaEmbed',
 			'|',
